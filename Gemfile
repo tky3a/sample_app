@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+gem 'bootstrap-sass', '3.3.7'
+
+gem 'pry-rails'
+gem 'pry-byebug'
+
 gem 'rails',        '5.1.4'
 gem 'puma',         '3.9.1'
 gem 'sass-rails',   '5.0.6'

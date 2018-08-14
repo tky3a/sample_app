@@ -6,20 +6,26 @@ def setup
 end
 
   test "should get home" do
-    get static_pages_home_url
+    get root_path
     assert_response :success
-    assert_select "title", "Home | #{@base_title}"
+    assert_select "title", "#{@base_title}"
   end
 
   test "should get help" do
-    get static_pages_help_url
+    get help_path
     assert_response :success
     assert_select "title", "Help | #{@base_title}"
   end
 
   test "should get about" do
-    get static_pages_about_url #aboutのルーティングがあるか検証
+    get about_path #aboutのルーティングがあるか検証
     assert_response :success #aboutアクションがあって、viewもあるか検証,
     assert_select "title", "About | #{@base_title}" #titleタグの文字がこのようになっているか検証
+  end
+
+  test "should get contact" do
+    get contact_path
+    assert_response :success
+    assert_select "title", "Contact | #{@base_title}"
   end
 end
