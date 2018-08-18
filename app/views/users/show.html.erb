@@ -1,0 +1,11 @@
+<%= provide(:title, @user.name) %>
+<div class="row">
+  <aside class="col-md-4"><!--コンテンツの位置を調整-->
+    <section class="user_info"><!--CSSで調整していきます-->
+      <h1>
+      <%= gravatar_for @user %><!--ヘルパーを使って画像表示-->
+      <%= @user.name %>
+      </h1>
+    </section>
+</aside>
+</div>
